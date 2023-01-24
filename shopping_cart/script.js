@@ -2,7 +2,7 @@ var products = [
   {
     id: 1,
     name: "product1",
-    price: 50,
+    price: 55,
 
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
     qte: 1,
@@ -11,14 +11,6 @@ var products = [
     id: 2,
     name: "product2",
     price: 40,
-
-    img: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej.png",
-    qte: 1,
-  },
-  {
-    id: 3,
-    name: "product3",
-    price: 20,
 
     img: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej.png",
     qte: 1,
@@ -76,6 +68,17 @@ products.forEach((element) => {
   svg1.classList.add("ml-8");
 
   div.appendChild(svg1);
+
+  var heart = document.createElement("i");
+  heart.classList.add(["fa-regular"]);
+
+  heart.classList.add(["mx-5"]);
+  heart.classList.add(["fa-heart"]);
+  div.appendChild(heart);
+
+  heart.addEventListener("click", function () {
+    heart.classList.toggle(["fa-solid"]);
+  });
 
   svg1.addEventListener("click", function () {
     div.classList.toggle("hidden");
